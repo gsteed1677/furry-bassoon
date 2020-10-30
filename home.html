@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Things Pokemon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="https://bulma.io">
+                <img src="./Pokemon logo.png" width="112" height="35">
+              </a>
+              <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+              <div class="navbar-end">
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+                      <a class="navbar-item">
+                        Facebook Group
+                      </a>
+                      <a class="navbar-item">
+                        Pokemon Go
+                      </a>
+                    </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class="container">
+        <div class="control">
+            <input class="input" type="text" placeholder="Search Pokemon">
+          </div>
+          <div class="control" id = "pokemon-rand">
+            <a class="button is-info">
+              Search
+            </a>
+          </div>
+    <div class="container">
+        <div class = "name&element">
+            <h1>Pokemon</h1>
+            <ul id = "pokemon-display">
+                <li>Name: Pikachu, Element: Electric</li>
+                <li>Name: Bulbasaur, Element: Grass</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./TCGPokescript.js"></script>
+</body>
+</html>
