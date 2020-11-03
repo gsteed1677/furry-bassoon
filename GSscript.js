@@ -1,31 +1,44 @@
 $(document).ready(function() {
 
-$("#searchClick").on("click", function() {
+    $("#searchClick").on("click", function() {
     var pokemonName = $("#textInput").val();
-    console.log(pokemonName)
+    // console.log(pokemonName)
     $("#textInput").val("")
     
     getPokeApi(pokemonName);
 });
 
+})
+
 
 var getPokeApi = function (pokemonName) {
-    var requestURL = "https://pokeapi.co/api/v2/";
+    // console.log(pokemonName)
+    var requestURL = "https://pokeapi.co/api/v2/pokemon/" + pokemonName;
     //AJAX call
     $.ajax({
         url: requestURL,
         method: 'GET',
     }).then(function (data) {
-        console.log('data', data)
+        console.log(data)
         console.log(data.name)
     
-    // var pokemon = $("#display-pokemon")
+    $("#display-pokemon").empty();
+    
+    var pokemon = $("#display-pokemon");
+    var pokeName = $("<h1>");
+    var pokeMove = $("<p>");
+    var pokeType = $("<p>");
+    var pokeIndex = $("<p>");
 
-    // var pokeName = $("<h1>")
+    pokeMove.text("Moves: " + data.moves[0].move.name +", " + data.moves[1].move.name + ", " + data.moves[2].move.name + ", " + data.moves[3].move.name)
+    pokeName.text("Name: " + data.name.toUpperCase());
+    pokeType.text("Type: " + data.types[0].type.name);
+    pokeIndex.text("Pokedex #: " + data.id);
 
-    // pokeName.text("Name: " + data.results[0].name);
-
-    // pokemon.append(pokeName);
+    pokemon.append(pokeName);
+    pokemon.append(pokeMove);
+    pokemon.append(pokeType);
+    pokemon.append(pokeIndex);
 
     })
 }
@@ -33,7 +46,3 @@ var getPokeApi = function (pokemonName) {
 
 
 //Event listener
-$("#random-poke").on("click", getPokeApi);
-
-
-})
