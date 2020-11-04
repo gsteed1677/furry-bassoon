@@ -12,7 +12,7 @@
         <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
               <a class="navbar-item" href="">
-                <img src="https://files.slack.com/files-pri/T01ANHX3F5F-F01DFMHN90E/pokemon-clipart.png" width="112" height="35">
+                <img src="./image/pokemon-clipart.png" width="112" height="35">
               </a>
               <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -23,13 +23,13 @@
               <div class="navbar-end">
                 <div id="navbarBasicExample" class="navbar-menu">
                     <div class="navbar-start">
-                      <a class="navbar-item" href="https://www.facebook.com/groups/PokemonGOColorado">
+                      <a class="navbar-item" href="https://www.facebook.com/groups/PokemonGOColorado" target="_blank">
                         Facebook Group
                       </a>
-                      <a class="navbar-item" href="https://www.pokemongo.com/en-us/">
+                      <a class="navbar-item" href="https://www.pokemongo.com/en-us/" target="_blank">
                         Pokemon Go
                       </a>
-                      <a class="navbar-item" href="https://www.pokemon.com/us/pokemon-tcg/play-online/">
+                      <a class="navbar-item" href="https://www.pokemon.com/us/pokemon-tcg/play-online/"target="_blank" >
                         PokemonTCG
                       </a>
                     </div>
@@ -47,10 +47,44 @@
             </a>
           </div>
     </div>
-    <footer>
-    </footer>
+
+<!--Pokemon stats and playing cards-->
+<div class="tile is-ancestor">
+    <div class="tile is-vertical is-8">
+      <div class="tile is-parent" id="pokeStats">
+        <article class="tile is-child notification is-warning">
+          <p class="title">Pokemon Stats</p>
+          <p class="subtitle">Stats Here</p>
+          <div class="content">
+            <!-- Content -->
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent" id="pokeCard">
+      <article class="tile is-child notification is-warning">
+        <div class="content">
+          <p class="title">Pokemon Cards</p>
+          <p class="subtitle"></p>
+          <div class="content">
+            <!-- Content -->
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+      
+  
     <script src="./GSscript.js"></script>
     <script src="./TCGPokescript.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <footer>
+        <nav class="navbar fixed-bottom" src="./" style="background-color: hsl(48, 100%, 67%)">
+     
+          
+          <img class="pokeFooter" src="./image/PngItem_24232.png" alt="pokemon" />
+        
+        </nav>
+      </footer>
 </body>
 </html>
