@@ -60,7 +60,15 @@ var getPokeApi = function (pokemonName, saveToLocal) {
     url: requestURL,
     method: 'GET',
   }).then(function (data) {
+
+    //second fetch here:
+    // fetch(dataCard) {
     
+   // }
+
+
+
+
     if (saveToLocal) {
       saveToLocalStorage(data.name);
       renderRecentPokemon();
@@ -74,19 +82,30 @@ var getPokeApi = function (pokemonName, saveToLocal) {
     var pokeType = $("<p>");
     var pokeIndex = $("<p>");
 
-    var str = 'Moves: '
+    var str = "Moves: "
+    console.log(data)
+    function randArr() {
+    var movesArr = [];
+    for (var i = 0; i < 5; i++) {
+    
+    var random = data.moves[Math.floor(Math.random() * 102)];
+    movesArr.push(random);
+    console.log(random)
+    str += data.moves[i].move.name + " "
+    }
+    console.log(movesArr)
+    }
+    randArr();
 
     for (var i = 0; i < data.moves.length; i++) {
-      str += data.moves[i].move.name
     }
 
+
+
     pokeMove.text(str)
-
-
     pokeName.text("Name: " + data.name.toUpperCase());
-    pokeType.text("Type: " + data.types[0].type.name);
+    pokeType.text("Type: " + data.types[0].type.name.toUpperCase());
     pokeIndex.text("Pokedex #: " + data.id);
-
     pokemon.append(pokeName);
     pokemon.append(pokeMove);
     pokemon.append(pokeType);
