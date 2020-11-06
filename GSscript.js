@@ -52,20 +52,22 @@ $(document).ready(function () {
     });
   };
 
-  let apiPokemon = (pokemonName) => {
+  function apiPokemon(pokemonName, saveToLocal) {
     let requestURL = "https://api.pokemontcg.io/v1/cards?name=" + pokemonName;
     $.ajax({
       url: requestURL,
       method: "GET",
     }).then(function (data) {
-      // if (saveToLocal) {
-      //   saveToLocalStorage(data.cards[0].imageUrl);
-      //   renderRecentPokemon();
-      // }
+      console.log(data.cards[0].imageUrl)
+      if (saveToLocal) {
+        saveToLocalStorage(data.cards[0].imageUrl);
+        renderRecentPokemon();
+      }
       console.log(data.cards[0]);
       let pokemon = $("#pokemon-display");
       let pokemonName = $("<img>");
       pokemonName.attr("src", "" + data.cards[0].imageUrl);
+      $("#pokemon-display").empty()
       pokemon.append(pokemonName);
 
       
@@ -97,7 +99,7 @@ function renderRecentPokemon() {
     btn.text(recentPokemon[i]);
     btn.click({ name: recentPokemon[i] }, function (e) {
       getPokeApi(e.data.name);
-      // apiPokemon(e.data.cards[0].imageUrl)
+      apiPokemon(e.data.cards[0].imageUrl)
     });
     $("#recent-pokemon").append(btn);
   }
