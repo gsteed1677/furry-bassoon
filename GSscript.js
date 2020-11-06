@@ -77,7 +77,7 @@ var getPokeApi = function (pokemonName, saveToLocal) {
     $("#display-pokemon").empty();
 
     var pokemon = $("#display-pokemon");
-    var pokeName = $("<h1>");
+    var pokeName = $("<h3>");
     var pokeMove = $("<p>");
     var pokeType = $("<p>");
     var pokeIndex = $("<p>");
