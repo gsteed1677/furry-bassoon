@@ -1,189 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Things Pokemon</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-
-<body>
-  <header>
-    <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="">
-          <img src="./image/pokemon-clipart.png" width="112" height="35">
-        </a>
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-          data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div class="navbar-end">
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="https://www.facebook.com/groups/PokemonGOColorado" target="_blank">
-              Facebook Group
-            </a>
-            <a class="navbar-item" href="https://www.pokemongo.com/en-us/" target="_blank">
-              Pokemon Go
-            </a>
-            <a class="navbar-item" href="https://www.pokemon.com/us/pokemon-tcg/play-online/" target="_blank">
-              PokemonTCG
-            </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Things Pokemon</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Erica+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar is-warning"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div class="navbar-brand">
+          <a class="navbar-item" href="">
+            <img src="./image/pokemon-clipart.png" width="112" height="35" />
+          </a>
+          <a
+            role="button"
+            class="navbar-burger burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-end">
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a
+                class="navbar-item"
+                href="https://www.facebook.com/groups/PokemonGOColorado"
+                target="_blank"
+              >
+                Facebook Group
+              </a>
+              <a
+                class="navbar-item"
+                href="https://www.pokemongo.com/en-us/"
+                target="_blank"
+              >
+                Pokemon Go
+              </a>
+              <a
+                class="navbar-item"
+                href="https://www.pokemon.com/us/pokemon-tcg/play-online/"
+                target="_blank"
+              >
+                PokemonTCG
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-  </header>
-  <div class="container">
-    <div class="control">
-      <input id="textInput" class="input" type="text" placeholder="Who is that Pokemon?!">
-    </div>
-    <div class="control">
-      <a id="searchClick" class="button is-info">
-        PokeSearch
-      </a>
-    </div>
-  </div>
-  <div id="recent-pokemon" style="color: rgb(15, 15, 15)"></div>
-
-  <!--Pokemon stats and playing cards-->
-  <div class="tile is-ancestor">
-    <div class="tile is-vertical is-8">
-      <div class="tile is-parent" id="pokeStats">
-        <article class="tile is-child notification is-warning">
-          <p class="title">Pokemon Stats</p>
-          <p class="subtitle">Stats Here</p>
-          <div id="display-pokemon" style="color: rgb(15, 15, 15)" class="content">
-            <!-- Content -->
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="tile is-parent" id="pokeCard">
-      <article class="tile is-child notification is-warning">
-        <div class="content">
-          <p class="title">Pokemon Cards</p>
-          <p class="subtitle"></p>
-          <div class="content">
-            <!-- Content -->
-=======
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Things Pokemon</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-              <a class="navbar-item" href="">
-                <img src="./image/pokemon-clipart.png" width="112" height="35">
-              </a>
-              <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-              </a>
-            </div>
-              <div class="navbar-end">
-                <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-start">
-                      <a class="navbar-item" href="https://www.facebook.com/groups/PokemonGOColorado" target="_blank">
-                        Facebook Group
-                      </a>
-                      <a class="navbar-item" href="https://www.pokemongo.com/en-us/" target="_blank">
-                        Pokemon Go
-                      </a>
-                      <a class="navbar-item" href="https://www.pokemon.com/us/pokemon-tcg/play-online/"target="_blank" >
-                        PokemonTCG
-                      </a>
-                    </div>
-              </div>
-            </div>
-          </nav>
+      </nav>
     </header>
     <div class="container">
-        <div class="control">
-            <input class="input" type="text" placeholder="Who is that Pokemon?!">
-          </div>
-          <div class="control">
-            <a class="button is-info">
-              PokeSearch
-            </a>
->>>>>>> 44104aba17cf040b81e854c964266ec75b61f386
-          </div>
-        </div>
-      </article>
+      <div class="control">
+        <input
+          id="textInput"
+          class="input"
+          type="text"
+          placeholder="Who is that Pokemon?!"
+        />
+      </div>
+      <div class="control">
+        <a id="searchClick" class="button is-info"> PokeSearch </a>
+      </div>
     </div>
-<<<<<<< HEAD
-  </div>
-
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-  <script src="GSscript.js"></script>
-  <script src="TCGPokescript.js"></script>
-  
-  <footer>
-    <nav class="navbar fixed-bottom" src="./" style="background-color: hsl(48, 100%, 67%)">
-
-
-      <img class="pokeFooter" src="./image/PngItem_24232.png" alt="pokemon" />
-
-    </nav>
-  </footer>
-</body>
-
-</html>
-
-=======
-
-<!--Pokemon stats and playing cards-->
-<div class="tile is-ancestor">
-    <div class="tile is-vertical is-8">
-      <div class="tile is-parent" id="pokeStats">
+    <!-- <div id="recent-pokemon" style="color: rgb(15, 15, 15)"></div> -->
+    <!--Pokemon stats and playing cards-->
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-8">
+        <div class="tile is-parent" id="pokeStats">
+          <article class="tile is-child notification is-warning">
+            <p class="title" id="pokeTitle">Pokemon Stats</p>
+            <div id="recent-pokemon" style="color: rgb(15, 15, 15)"></div>
+            <br />
+            <div
+              id="display-pokemon"
+              style="color: rgb(15, 15, 15)"
+              class="content"
+            ></div>
+          </article>
+        </div>
+      </div>
+      <div class="tile is-parent" id="pokeCard">
         <article class="tile is-child notification is-warning">
-          <p class="title">Pokemon Stats</p>
-          <p class="subtitle">Stats Here</p>
           <div class="content">
-            <!-- Content -->
+            <p class="title" id="pokeTitle">Pokemon Cards</p>
+            <p class="subtitle"></p>
+            <div class="content">
+              <!-- Content -->
+            </div>
           </div>
         </article>
       </div>
     </div>
-    <div class="tile is-parent" id="pokeCard">
-      <article class="tile is-child notification is-warning">
-        <div class="content">
-          <p class="title">Pokemon Cards</p>
-          <p class="subtitle"></p>
-          <div class="content">
-            <!-- Content -->
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-      
-  
-    <script src="./GSscript.js"></script>
-    <script src="./TCGPokescript.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <footer>
-        <nav class="navbar fixed-bottom" src="./" style="background-color: hsl(48, 100%, 67%)">
-     
-          
-          <img class="pokeFooter" src="./image/PngItem_24232.png" alt="pokemon" />
-        
-        </nav>
-      </footer>
-</body>
+      <nav
+        class="navbar fixed-bottom"
+        src="./"
+        style="background-color: hsl(48, 100%, 67%)"
+      >
+        <img class="pokeFooter" src="./image/PngItem_24232.png" alt="pokemon" />
+      </nav>
+    </footer>
+    <div class="audioDiv">
+      <audio controls autoplay id="pokeMusic">
+        <source src="./music/Pokemon-Theme-Song.mp3" type="audio/mp3" />
+      </audio>
+      <button onclick="setHalfVolume()" type="button">lower volume</button>
+      <script>
+        var theme = document.getElementById("pokeMusic");
+        function setHalfVolume() {
+          theme.volume = 0.1;
+        }
+      </script>
+    </div>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="GSscript.js"></script>
+    <script src="TCGPokescript.js"></script>
+  </body>
 </html>
->>>>>>> 44104aba17cf040b81e854c964266ec75b61f386

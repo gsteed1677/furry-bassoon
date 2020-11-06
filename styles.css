@@ -2,30 +2,45 @@ body {
   background-image: url("https://images.hdqwalls.com/download/pokemon-2560x1440.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 800px;
+  height: 850px;
+  font-family: "Acme", sans-serif;
 }
 header {
   opacity: 90%;
 }
-
 .control {
   margin: auto;
   width: 50%;
   padding: 10px;
+  font-family: "Acme", sans-serif;
 }
-
 #pokeStats {
-  height: 400px;
+  /* height: 200px; */
   opacity: 80%;
   margin-left: 20px;
+  font-family: "Acme", sans-serif;
+  font-size: large;
 }
-
 #pokeCard {
-  height: 400px;
+  height: 500px;
   opacity: 80%;
   margin-right: 20px;
+  font-family: "Acme", sans-serif;
 }
-
+button {
+  background-color: white;
+  border-radius: 30px;
+}
+#pokeTitle {
+  font-size: 50px;
+  color: rgb(15, 15, 15);
+  text-decoration: underline;
+}
+.audioDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 footer {
   position: fixed;
   left: 0;
@@ -37,7 +52,7 @@ footer {
 }
 .pokeFooter {
   position: relative;
-  height: 30px;
+  height: 45px;
   align-content: center;
   margin-left: 47%;
 }
