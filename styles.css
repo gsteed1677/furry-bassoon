@@ -26,6 +26,10 @@ header {
   margin-right: 20px;
 }
 
+.music {
+  align-content: center;
+}
+
 footer {
   position: fixed;
   left: 0;
