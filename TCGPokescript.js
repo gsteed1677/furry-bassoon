@@ -1,26 +1,42 @@
 $(document).ready(function(){ 
 
-    $("#pokemon-rand").on("click", function(){
-        let pokemonName = $("#textInput").val();
-        console.log(pokemonName)
-        $("#textInput").val([])
+$("#searchClick").on("click", function(){
+        let pokemonCard = $("#textInput").val();
+        console.log(pokemonCard)
+        $("#textInput").val("")
+        apiPokemon(pokemonCard, true);
+    });
 
-        apiPokemon(pokemonName);
-})});
-
-let apiPokemon = () => {
-    let requestURL = "https://api.pokemontcg.io/v1/cards";
-
+function apiPokemon(pokemonCard) {
+    // console.log('inside of apiPokemon function')
+    console.log(pokemonCard)
+    let requestURL = "https://api.pokemontcg.io/v1/cards?name=" + (pokemonCard || '').trim().toLowerCase();
     $.ajax({
         url: requestURL,
         method: "GET",
     }).then(function (data) {
         console.log("data", data);
-        console.log(data.name);
+        // console.log(data.cards[0].name);
+        // console.log(data.cards[0].imageUrl)
+
 
         let pokemon = $("#pokemon-display");
-        let pokemonName = $("<p>");
-        pokemonName.text("Name:" + data.results[0].name);
-        pokemon.append(pokemonName);
+        let pokemonCard = $("<img>");
+
+        for (var i = 0; i < data.cards.length; i++) {
+
+        pokemonCard.attr("src", "" + data.cards[i].imageUrl);
+        console.log(data.cards[i].imageUrl)
+        }
+
+        pokemon.append(pokemonCard);
+        $("#pokemon-display").empty();
+        // $("#pokemon-display").empty();
+        // pokemonCard.attr("src", "" + data.cards[0].imageUrl);
+
+        // pokemon.append(pokemonCard);
+
     });
+    
 }
+})
