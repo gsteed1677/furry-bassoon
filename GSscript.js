@@ -38,6 +38,8 @@ var renderRecentPokemon = function () {
     $('#recent-pokemon').append(btn);
   }
 
+  
+
 }
 
 $(document).ready(function () {
@@ -46,6 +48,10 @@ $(document).ready(function () {
     var pokemonName = $("#textInput").val();
     // console.log(pokemonName)
     $("#textInput").val("")
+
+    if (!pokemonName) {
+        return;
+    }
 
     getPokeApi(pokemonName, true);
   });
@@ -60,13 +66,6 @@ var getPokeApi = function (pokemonName, saveToLocal) {
     url: requestURL,
     method: 'GET',
   }).then(function (data) {
-
-    //second fetch here:
-    // fetch(dataCard) {
-    
-   // }
-
-
 
 
     if (saveToLocal) {
@@ -90,8 +89,8 @@ var getPokeApi = function (pokemonName, saveToLocal) {
     
     var random = data.moves[Math.floor(Math.random() * 102)];
     movesArr.push(random);
-    console.log(random)
-    str += data.moves[i].move.name + " "
+    console.log("random", random.move.name)
+    str += random.move.name + " -- "
     }
     console.log(movesArr)
     }
